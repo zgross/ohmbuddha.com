@@ -16,6 +16,8 @@ params:
       url: "https://github.com/zgross" 
     - name: linkedin 
       url: "https://www.linkedin.com/in/zachary-gross-82257729/"
+    - name: email
+      url: "mailto:ohmbuddha@gmail.com"
 
 deployment:
   order:
