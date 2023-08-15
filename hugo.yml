@@ -1,0 +1,38 @@
+baseURL: http://ohmbuddha.com/
+languageCode: en-us
+title: OhmBuddha
+theme: PaperMod
+params:
+  profileMode:
+    enabled: true
+    title: Zach Gross
+    subtitle: Senior Software Engineer at Procore Technologies
+    imageUrl: "https://avatars.githubusercontent.com/u/146519?v=4"
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/zgross" 
+    - name: linkedin 
+      url: "https://www.linkedin.com/in/zachary-gross-82257729/"
+
+deployment:
+  order:
+    - .jpg$
+    - .gif$
+  targets:
+    - name: zach-gross-personal-site-s3 
+      url: "s3://www.ohmbuddha.com?region=us-east-1"
+  matchers:
+    - pattern: ^.+\.(js|css|svg|ttf)$
+      cacheControl: max-age=31536000, no-transform, public
+      gzip: true
+    - pattern: ^.+\.(png|jpg)$
+      cacheControl: max-age=31536000, no-transform, public
+      gzip: false
+    - pattern: ^sitemap\.xml$
+      contentType: application/xml
+      gzip: true
+    - pattern: ^.+\.(html|xml|json)$
+      gzip: true
