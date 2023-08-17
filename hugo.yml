@@ -18,6 +18,8 @@ params:
       url: "https://www.linkedin.com/in/zachary-gross-82257729/"
     - name: email
       url: "mailto:ohmbuddha@gmail.com"
+    - name: cv
+      url: "Zachary_Gross_Resume.pdf"
 
 deployment:
   order:
